@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Inventory = require('../models/inventory');
-const{check,validatonResult}=require('express-validator')
+const{check, validationResult }=require('express-validator')
 const auth =require('../middleware/auth');
 const inventory = require('../models/inventory');
 /**
@@ -58,7 +58,7 @@ router.post('/',
 
 async (req, res) => {
 
-    const result = validatonResult(req.body);
+    const result = validationResult(req.body);
     if(!result.isEmpty()) {
       return res.status(400).json({
         errors: result,
@@ -68,7 +68,7 @@ async (req, res) => {
     const { productName, buyingPrice, sellingPrice, supplierName,category } = req.body;
 
     try {
-      const inventory = new Contact({
+      const inventory = new Inventory({
         productName, 
         buyingPrice,
         sellingPrice,
@@ -78,7 +78,7 @@ async (req, res) => {
       });
 
       await inventory.save();
-    res.status(201).json(savedInventory);
+    res.status(201).json(inventory);
   } catch (err) {
     console.error(err.message);
     res.status(400).json({ error: err.message });
