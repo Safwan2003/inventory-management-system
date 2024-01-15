@@ -3,11 +3,10 @@ const router = express.Router();
 const Inventory = require('../models/inventory');
 const{check, validationResult }=require('express-validator')
 const auth =require('../middleware/auth');
-const inventory = require('../models/inventory');
 /**
  * @swagger
  * /api/inventory:
- *   get:
+ *   get: 
  *     summary: Get all products in the inventory.
  *     responses:
  *       200:
