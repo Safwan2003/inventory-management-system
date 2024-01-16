@@ -34,7 +34,9 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use('/api/inventory', require('./routes/inventory'));
 app.use('/api/user', require('./routes/user'));
 app.use('/api/auth', require('./routes/auth'));
-
+app.get('/',(req,res)=>{
+  res.send("WELLCOME TO INVENTORY MANAGEMENT SYSTEM BY SAFWAN ALI && MUHAMMAD SHAFFAN goes to url/api-docs/ for swagger doc")
+})
 connectDB();
 
 // Start the server
