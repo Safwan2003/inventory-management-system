@@ -56,7 +56,7 @@ The server will be running at http://localhost:2000.
 API Documentation
 Swagger documentation is available at http://localhost:2000/api-docs once the server is running. Explore and test the API endpoints using Swagger UI.
 
-live:
+live:https://inventory-management-system-wine.vercel.app/
 
 
 Contributing
