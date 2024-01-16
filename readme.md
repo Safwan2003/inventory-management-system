@@ -56,8 +56,8 @@ The server will be running at http://localhost:2000.
 API Documentation
 Swagger documentation is available at http://localhost:2000/api-docs once the server is running. Explore and test the API endpoints using Swagger UI.
 
-live:https://relieved-threads-cod.cyclic.app/
-app:https://github.com/Safwan2003/starter-express-api
+live:
+
 
 Contributing
 Feel free to contribute to the project by opening issues or submitting pull requests. Your feedback and suggestions are highly appreciated.
